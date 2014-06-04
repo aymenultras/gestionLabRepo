@@ -21,8 +21,10 @@ public class TestPlateforme {
 		Bureau bureau=new Bureau("informatique",1);
 		
 		Bureau bureau2 = new Bureau("telecome",2);
-
 		
+		//insertion deux bureaux
+		System.out.println(laboratoire.insertBureauInToThisLaboratoire(bureau));
+		System.out.println(laboratoire.insertBureauInToThisLaboratoire(bureau2));
 	}
 
 }
