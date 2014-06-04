@@ -6,9 +6,9 @@ public class Bureau {
 
 	private String nom;
 	private int code;
-	private static final int NB_MAX_CHERCHEUR = 5; 
+	private static final int NB_MAX_CHERCHEUR = 5;
 	private Chercheur[] chercheurs = new Chercheur[NB_MAX_CHERCHEUR];
-	
+
 	public Bureau() {
 
 	}
@@ -18,6 +18,13 @@ public class Bureau {
 		this.nom = nom;
 		this.code = code;
 		this.chercheurs = chercheurs;
+	}
+
+	public Bureau(String nom, int code) {
+
+		this.nom = nom;
+		this.code = code;
+
 	}
 
 	@Override
