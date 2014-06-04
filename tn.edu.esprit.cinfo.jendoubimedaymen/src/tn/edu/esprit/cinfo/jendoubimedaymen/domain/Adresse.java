@@ -7,7 +7,7 @@ public class Adresse {
 	private String ville;
 	
 	public Adresse() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Adresse(int code, String gouvernorat, String ville) {
