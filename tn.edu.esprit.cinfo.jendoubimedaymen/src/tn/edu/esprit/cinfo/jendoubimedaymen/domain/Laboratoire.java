@@ -9,9 +9,10 @@ public class Laboratoire {
 	private static final int NB_MAX_BUREAU = 50;
 	private Bureau[] bureaus = new Bureau[NB_MAX_BUREAU];
 	private Adresse adresse;
+	private int nb_bureaux = 0;
 
 	public Laboratoire() {
-		
+
 	}
 
 	public Laboratoire(String nom, String specialite, Bureau[] bureaus,
@@ -105,6 +106,16 @@ public class Laboratoire {
 
 	public static int getNbMaxBureau() {
 		return NB_MAX_BUREAU;
+	}
+
+	public boolean insertBureauInToThisLaboratoire(Bureau bureau) {
+		if (nb_bureaux < NB_MAX_BUREAU) {
+			bureaus[nb_bureaux] = bureau;
+			nb_bureaux++;
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

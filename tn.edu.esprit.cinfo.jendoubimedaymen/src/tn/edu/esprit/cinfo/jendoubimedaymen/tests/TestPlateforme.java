@@ -17,10 +17,12 @@ public class TestPlateforme {
 		laboratoire.setNom("Intuitiv Tech");
 		laboratoire.setAdresse(adresse);
 		
+		//creation de deux bureau
 		Bureau bureau=new Bureau("informatique",1);
 		
-		Bureau bureau2 = new Bureau();
+		Bureau bureau2 = new Bureau("telecome",2);
 
+		
 	}
 
 }
