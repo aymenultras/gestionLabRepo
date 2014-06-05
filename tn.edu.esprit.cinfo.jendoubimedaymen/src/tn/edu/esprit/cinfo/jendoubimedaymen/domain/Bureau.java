@@ -6,8 +6,9 @@ public class Bureau {
 
 	private String nom;
 	private int code;
-	private static final int NB_MAX_CHERCHEUR = 5;
+	private static final int NB_MAX_CHERCHEUR = 1;
 	private Chercheur[] chercheurs = new Chercheur[NB_MAX_CHERCHEUR];
+	private int nb_chercheur = 0;
 
 	public Bureau() {
 
@@ -92,4 +93,15 @@ public class Bureau {
 		return NB_MAX_CHERCHEUR;
 	}
 
+	public boolean insertChercheurIntoThisBureau(Chercheur chercheur) {
+		if (nb_chercheur < NB_MAX_CHERCHEUR) {
+			chercheurs[nb_chercheur] = chercheur;
+			nb_chercheur++;
+			return true;
+		} else {
+			System.out.println("el bureau m3ibbi hawina ");
+			return false;
+		}
+
+	}
 }
