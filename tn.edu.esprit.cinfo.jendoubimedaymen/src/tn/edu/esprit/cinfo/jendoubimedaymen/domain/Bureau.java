@@ -6,7 +6,7 @@ public class Bureau {
 
 	private String nom;
 	private int code;
-	private static final int NB_MAX_CHERCHEUR = 1;
+	private static final int NB_MAX_CHERCHEUR = 5;
 	private Chercheur[] chercheurs = new Chercheur[NB_MAX_CHERCHEUR];
 	private int nb_chercheur = 0;
 
@@ -103,5 +103,9 @@ public class Bureau {
 			return false;
 		}
 
+	}
+
+	public int getNb_Chercheur() {
+		return nb_chercheur;
 	}
 }

@@ -24,18 +24,23 @@ public class TestPlateforme {
 		Bureau bureau2 = new Bureau("telecome", 2);
 
 		// insertion deux bureaux
-		System.out.println(laboratoire.insertBureauInToThisLaboratoire(bureau));
-		System.out
-				.println(laboratoire.insertBureauInToThisLaboratoire(bureau2));
+		System.out.println("resultat d'insertion d'un bureau"
+				+ laboratoire.insertBureauInToThisLaboratoire(bureau));
+		System.out.println("resultat d'insertion d'un bureau"
+				+ laboratoire.insertBureauInToThisLaboratoire(bureau2));
 
 		// Création de 2 chercheur
 		Chercheur chercheur = new Chercheur("Aymen", 120, "développeur");
 		Chercheur chercheur2 = new Chercheur("Takwa", 101, "Développeur");
 
 		// Affectation des chercheurs au bureau
-		System.out.println(bureau.insertChercheurIntoThisBureau(chercheur));
-		System.out.println(bureau.insertChercheurIntoThisBureau(chercheur2));
+		System.out.println("resultat d'insertion d'un chercheur"
+				+ bureau.insertChercheurIntoThisBureau(chercheur));
+		System.out.println("resultat d'insertion d'un chercheur"
+				+ bureau.insertChercheurIntoThisBureau(chercheur2));
 
+		System.out.println("le bureau saturé : "
+				+ laboratoire.findTheFullOffice());
 	}
 
 }

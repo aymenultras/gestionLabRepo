@@ -6,7 +6,7 @@ public class Laboratoire {
 
 	private String nom;
 	private String specialite;
-	private static final int NB_MAX_BUREAU = 50;
+	private static final int NB_MAX_BUREAU = 5;
 	private Bureau[] bureaus = new Bureau[NB_MAX_BUREAU];
 	private Adresse adresse;
 	private int nb_bureaux = 0;
@@ -116,6 +116,33 @@ public class Laboratoire {
 		} else {
 			return false;
 		}
+	}
+
+	public Bureau findTheFullOffice() {
+
+		Bureau fullOffice = bureaus[0];
+		for (Bureau b : bureaus) {
+			if (b != null) {
+				if (b.getNb_Chercheur() > fullOffice.getNb_Chercheur()) {
+					fullOffice = b;
+				}
+			}
+		}
+		return fullOffice;
+	}
+
+	public Bureau findTheEmptyOffice() {
+
+		Bureau emptyOffice = bureaus[0];
+
+		for (Bureau b : bureaus) {
+			if (b != null) {
+				if (b.getNb_Chercheur() < emptyOffice.getNb_Chercheur()) {
+					emptyOffice = b;
+				}
+			}
+		}
+		return emptyOffice;
 	}
 
 }
